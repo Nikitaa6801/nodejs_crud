@@ -26,7 +26,7 @@ Router.post('/' ,(req,res)=>{
 Router.get('/showrecord', (req,res)=>{
      model.find((err,docs)=>{
         if(err) throw err
-       // console.log(docs)
+       console.log(docs)
         res.render('showrecord',{data:docs})
     })
 

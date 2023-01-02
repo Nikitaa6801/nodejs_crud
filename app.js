@@ -1,11 +1,14 @@
 const express =require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const mongodb = require('mongodb')
 
 const homeRouter = require('./src/router/homeRouter')
 
+
+
 mongoose.set('strictQuery', true)
-mongoose.connect('mongodb://127.0.0.1:27017/StudentRecord')
+mongoose.connect('mongodb+srv://ravimude:ajay7777@cluster0.thi8yzl.mongodb.net/studentrecord?retryWrites=true&w=majority')
 .then(()=>{ console.log('connected with db')})
 .catch(()=>{ console.log( 'not connected with db')})
 
